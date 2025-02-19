@@ -7,8 +7,8 @@ export function Footer() {
     return (
         <footer className="bg-[#121212] text-foreground mt-8 pb-8 mx-auto">
             <Separator className="my-8" />
-            <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="container mx-auto px-4 max-w-7xl">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
                     <div className="space-y-4">
                         <h3 className="font-bold text-lg">Mateusz Wala</h3>
                         <p className="text-sm text-muted-foreground">Software Engineer</p>
@@ -49,7 +49,7 @@ export function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="container mx-auto px-4 pt-2">
+            <div className="container mx-auto px-4 pt-2 max-w-7xl">
                 <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Mateusz Wala</p>
             </div>
         </footer>
