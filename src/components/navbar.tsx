@@ -1,14 +1,14 @@
-'use client';
-import { HoveredLink, Menu } from "@/components/ui/navbar-menu";
-import { cn } from "@/lib/utils";
+import Link from "next/link";
 
-export function Navbar({ className }: { className?: string; }) {
+import { Menu } from "@/components/ui/navbar-menu";
+
+export function Navbar() {
     return (
-        <div className={cn("fixed top-4 inset-x-0 max-w-xs mx-auto z-50", className)}>
+        <div className="fixed top-4 inset-x-0 max-w-xs mx-auto z-50" >
             <Menu>
-                <HoveredLink href="#about">About</HoveredLink>
-                <HoveredLink href="#projects">Projects</HoveredLink>
-                <HoveredLink href="#timeline">Timeline</HoveredLink>
+                <Link href="/">Home</Link>
+                <Link href="/projects">Projects</Link>
+                <Link href="/about">About</Link>
             </Menu>
         </div>
     );
