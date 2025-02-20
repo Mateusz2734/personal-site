@@ -13,7 +13,7 @@ export function Footer() {
                         <h3 className="font-bold text-lg">Mateusz Wala</h3>
                         <p className="text-sm text-muted-foreground">Software Engineer</p>
                         <p className="text-sm text-muted-foreground">📍 Kraków, Poland</p>
-                        <p className="text-sm text-muted-foreground">✉️ mateusz.wala2734@gmail.com</p>
+                        <p className="text-sm text-muted-foreground">✉️ kontakt.mateusz2734@gmail.com</p>
                         <p className="text-sm text-muted-foreground">📄 <a href="resume.pdf" target="_blank" className="underline">My resume</a></p>
                     </div>
                     <div>
