@@ -12,6 +12,13 @@ export default function MainPage() {
 
   return (
     <>
+      <SparklesCore
+        minSize={0.2}
+        maxSize={3.4}
+        particleDensity={50}
+        className="w-full absolute inset-0 h-screen"
+        particleColor="#c88cf5"
+      />
       <motion.h1
         initial={{
           opacity: 0,
@@ -44,14 +51,6 @@ export default function MainPage() {
           </Link>
         </button>
       </motion.h1>
-
-      <SparklesCore
-        minSize={0.2}
-        maxSize={3.4}
-        particleDensity={50}
-        className="w-full absolute inset-0 h-screen"
-        particleColor="#c88cf5"
-      />
     </>
   );
 }
