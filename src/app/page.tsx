@@ -8,7 +8,7 @@ import { Highlight } from "@/components/ui/hero-highlight";
 import { SparklesCore } from "@/components/ui/sparkles";
 
 export default function MainPage() {
-  const words = ["Enthusiast", "Software Engineer", "Problem Solver", "Software Developer", "Critical Thinker", "Programmer"];
+  const words = ["Software Engineer", "Problem Solver", "Software Developer", "Critical Thinker", "Programmer", "Enthusiast"];
 
   return (
     <>
