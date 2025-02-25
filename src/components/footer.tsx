@@ -20,7 +20,7 @@ export function Footer() {
                         <h4 className="font-semibold mb-4">Quick Links</h4>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="#" className="text-sm hover:underline">
+                                <Link href="/" className="text-sm hover:underline">
                                     Home
                                 </Link>
                             </li>
@@ -36,10 +36,10 @@ export function Footer() {
                             </li>
                             <li>
                                 <div className="flex space-x-4">
-                                    <Link href="https://www.linkedin.com/in/mateusz-wala2734/" target="_blank" rel="noopener noreferrer">
+                                    <Link href="https://www.linkedin.com/in/mateusz-wala2734/" target="_blank" rel="noopener noreferrer" aria-label="My LinkedIn profile">
                                         <Linkedin className="h-5 w-5" />
                                     </Link>
-                                    <Link href="https://github.com/Mateusz2734" target="_blank" rel="noopener noreferrer">
+                                    <Link href="https://github.com/Mateusz2734" target="_blank" rel="noopener noreferrer" aria-label="My GitHub profile">
                                         <Github className="h-5 w-5" />
                                     </Link>
                                 </div>

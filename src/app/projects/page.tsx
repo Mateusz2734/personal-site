@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 import { createProjectShowcase } from "@/components/project";
 import { BentoGrid } from "@/components/ui/bento-grid";
 
-import { Project } from "@/model/project";
-
 export default function ProjectsPage() {
     return (
         <motion.main
@@ -30,7 +28,7 @@ export default function ProjectsPage() {
     );
 }
 
-const projects: Project[] = [
+const projects = [
     {
         title: "Intrastat Helper",
         description:
