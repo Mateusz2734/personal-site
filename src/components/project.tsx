@@ -59,7 +59,7 @@ export function createProjectShowcase({ title, description, image, url, technolo
 const LargeViewportDescription = ({ description }: { description: string; }) => {
     return (
         <div className="h-full w-full bg-dot-white/[0.2]">
-            <p className="truncate text-wrap line-clamp-[24] text-xs lg:text-sm">
+            <p className="truncate text-wrap line-clamp-[24] text-xs xl:text-sm">
                 {description}
             </p>
         </div>
