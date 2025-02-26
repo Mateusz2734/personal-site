@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import { Badge } from "@/components/ui/badge";
 import { BentoGridItem } from "@/components/ui/bento-grid";
+import { cn } from "@/lib/utils";
 
 interface Project {
     title: string;
@@ -11,6 +12,7 @@ interface Project {
     image: string;
     url: string;
     technologies: Technology[];
+    badgesSpan?: number;
 }
 
 interface Technology {
@@ -19,12 +21,15 @@ interface Technology {
 }
 
 
-export function createProjectShowcase({ title, description, image, url, technologies }: Project, i: number) {
+export function createProjectShowcase({ title, description, image, url, technologies, badgesSpan = 2 }: Project, i: number) {
+    const descriptionClassName = cn("lg:col-span-1 hidden lg:block p-4", `lg:row-span-${9 - badgesSpan}`);
+    const badgesClassName = cn("lg:col-span-1 hidden lg:block p-4", `lg:row-span-${badgesSpan}`);
+
     const cards = [
         i % 2 == 1 ? {
             // LARGE VIEWPORT DESCRIPTION (LEFT)
             header: <LargeViewportDescription description={description} />,
-            className: "lg:col-span-1 lg:row-span-7 p-4 hidden lg:block",
+            className: descriptionClassName,
         } : null,
         {
             title: <ProjectTile title={title} />,
@@ -35,12 +40,12 @@ export function createProjectShowcase({ title, description, image, url, technolo
         i % 2 == 0 ? {
             // LARGE VIEWPORT DESCRIPTION (RIGHT)
             header: <LargeViewportDescription description={description} />,
-            className: "lg:col-span-1 lg:row-span-7 p-4 hidden lg:block",
+            className: descriptionClassName,
         } : null,
         {
             // LARGE VIEWPORT BADGES
             header: <LargeViewportBadges technologies={technologies} url={url} />,
-            className: "hidden lg:block lg:row-span-2 lg:col-span-1 p-4",
+            className: badgesClassName,
         },
         {
             // LARGE VIEWPORT SEPARATOR
@@ -65,7 +70,7 @@ const LargeViewportBadges = ({ technologies, url }: { technologies: Technology[]
     return (
         <div className="flex flex-col justify-end gap-4 items-center h-full w-full bg-dot-white/[0.2]">
             <GithubBadge url={url} />
-            <div className="flex gap-2 flex-wrap">
+            <div className="flex gap-2 flex-wrap justify-center">
                 {technologies.map(({ name, url }, i) => (
                     <LinkedBadge key={i} name={name} url={url} />
                 ))}
