@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <BackToTopButton />
         <Navbar />
         <section className="min-h-screen relative w-full flex flex-col items-center justify-center overflow-hidden py-24">
