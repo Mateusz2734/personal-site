@@ -90,8 +90,10 @@ const ProjectTile = ({ title }: { title: string; }) => {
 const LinkedBadge = ({ name, url }: { name: string; url: string; }) => {
     return (
         <Link href={url} target="_blank" rel="noopener noreferrer">
-            <Badge className="bg-neutral-800/50 text-neutral-300 backdrop-blur-sm transition-colors duration-300 hover:bg-neutral-700">
-                {name}
+            <Badge className="bg-neutral-800/50 backdrop-blur-sm transition-colors duration-300 hover:bg-neutral-700">
+                <div className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">
+                    {name}
+                </div>
             </Badge>
         </Link>
     );
