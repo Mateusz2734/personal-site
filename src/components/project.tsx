@@ -32,7 +32,7 @@ export function createProjectShowcase({ title, description, image, url, technolo
             className: descriptionClassName,
         } : null,
         {
-            title: <ProjectTile title={title} />,
+            title: <ProjectTitle title={title} />,
             description: <MainCardDescription description={description} technologies={technologies} url={url} />,
             header: <CoverImage src={image} />,
             className: "lg:col-span-3 lg:row-span-9",
@@ -79,7 +79,7 @@ const LargeViewportBadges = ({ technologies, url }: { technologies: Technology[]
     );
 };
 
-const ProjectTile = ({ title }: { title: string; }) => {
+const ProjectTitle = ({ title }: { title: string; }) => {
     return (
         <h1 className="block text-3xl lg:text-5xl mb-2 font-bold text-white bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">
             {title}
@@ -87,7 +87,7 @@ const ProjectTile = ({ title }: { title: string; }) => {
     );
 };
 
-const LinkedBadge = ({ name, url }: { name: string; url: string; }) => {
+const LinkedBadge = ({ name, url }: Technology) => {
     return (
         <Link href={url} target="_blank" rel="noopener noreferrer">
             <Badge className="bg-neutral-800/50 backdrop-blur-sm transition-colors duration-300 hover:bg-neutral-700">
