@@ -34,7 +34,7 @@ export function createProjectShowcase({ title, description, image, url, technolo
         {
             title: <ProjectTitle title={title} />,
             description: <MainCardDescription description={description} technologies={technologies} url={url} />,
-            header: <CoverImage src={image} />,
+            header: <CoverImage src={image} title={title} />,
             className: "lg:col-span-3 lg:row-span-9",
         },
         i % 2 == 0 ? {
@@ -125,12 +125,12 @@ const MainCardDescription = ({ description, technologies, url }: { description: 
     );
 };
 
-const CoverImage = ({ src }: { src: string; }) => {
+const CoverImage = ({ src, title }: { src: string; title: string; }) => {
     return (
         <div className="group relative w-full h-full overflow-hidden rounded-t-xl min-h-[8rem]">
             <Image
                 src={src}
-                alt="Project cover image"
+                alt={`${title} project screenshot`}
                 className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                 fill
             />
