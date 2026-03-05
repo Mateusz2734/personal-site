@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 
 import { BackToTopButton } from "@/components/back-to-top";
@@ -22,6 +22,11 @@ const siteUrl = "https://mwala.dev";
 const siteDescription =
   "Software Engineer based in Kraków, Poland. CS graduate from AGH University of Science and Technology. Passionate about building real software and solving challenging problems.";
 
+export const viewport: Viewport = {
+  themeColor: "#0a0a0a",
+  colorScheme: "dark",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
@@ -29,8 +34,35 @@ export const metadata: Metadata = {
     template: "%s | Mateusz Wala",
   },
   description: siteDescription,
+  keywords: [
+    "Mateusz Wala",
+    "Software Engineer",
+    "Full Stack Developer",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Go",
+    "Java",
+    "Python",
+    "Kraków",
+    "Poland",
+    "AGH",
+    "portfolio",
+    "web development",
+  ],
   authors: [{ name: "Mateusz Wala", url: siteUrl }],
   creator: "Mateusz Wala",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     type: "website",
     url: siteUrl,
@@ -73,6 +105,8 @@ export default function RootLayout({
               "@type": "Person",
               name: "Mateusz Wala",
               url: siteUrl,
+              description: siteDescription,
+              image: `${siteUrl}/og-image.png`,
               jobTitle: "Software Engineer",
               email: "kontakt.mateusz2734@gmail.com",
               address: {

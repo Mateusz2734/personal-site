@@ -15,13 +15,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: "https://mwala.dev/projects",
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 1,
+      priority: 0.8,
     },
     {
       url: "https://mwala.dev/about",
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 1,
+      priority: 0.8,
     },
   ];
 }

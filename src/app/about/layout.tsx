@@ -9,6 +9,14 @@ export const metadata: Metadata = {
     description:
       "Learn about Mateusz Wala — Software Engineer and CS graduate from AGH UST in Kraków, Poland.",
     url: "https://mwala.dev/about",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Mateusz Wala – Software Engineer",
+      },
+    ],
   },
   alternates: {
     canonical: "https://mwala.dev/about",
