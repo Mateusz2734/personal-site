@@ -16,14 +16,6 @@ const addVariablesForColors = plugin(({ addBase, theme }) => {
 
 const config: Config = {
   darkMode: "class",
-  safelist: [
-    "lg:row-span-2",
-    "lg:row-span-3",
-    "lg:row-span-4",
-    "lg:row-span-5",
-    "lg:row-span-6",
-    "lg:row-span-7",
-  ],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",

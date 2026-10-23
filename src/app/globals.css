@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+@source inline("lg:row-span-{1..9}");
 
 html {
   scroll-behavior: smooth;
